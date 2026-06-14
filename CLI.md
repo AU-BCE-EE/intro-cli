@@ -78,7 +78,43 @@ If the commands below do not work, we will sort it out.
 ## Cloning
 Cloning means making a copy of a Git repo on your local machine.
 You don't just get the current version of the files, but the entire ćommit history in a hidden `.git` subdirectory.
-Authentication
+
+Let's clone the repo!
+
+1. Browse to the repo. 
+   I find the easiest approach is to open a browser like Firefox or Brave, hit `Ctrl + L`, and start typing `github.com/AU` and use autocomplete and the `End` key to get to the right place, or at least the searchable list of repos. 
+2. Click the green `Code` button and, if needed, select `HTTPS`, as shown below. Copy (to your clipboard) the `https...` bit.
+3. Open Git Bash!
+4. Use `cd` to get to the correct directory, that is, the directory where you keep your local GitHub repos. You don't actually *have* to keep them all in the same location, but you should have an idea of where they are. If you have no idea, go through GitHub Desktop to find out.
+
+Now we are ready for some Git commands.
+I'll start a new list for them.
+
+Finally, time to clone!
+Enter this command:
+
+```
+git clone https://github.com/AU-BCE-EE/git-playground.git
+```
+
+where that `https:...` is pasted in with `Ctrl + Shift + v`. 
+This will download the repo contents and put them in a local directory with the name `git-playground`.
+
+## Fetching and pulling
+
+Now sit tight while I make some changes to the repo. . .
+
+OK, now it is time to practice fetching and pulling.
+
+First, fetch, with this:
+
+```
+git fetch
+```
+
+
+
+
 
 fetch and pull
 
