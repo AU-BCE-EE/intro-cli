@@ -14,21 +14,35 @@ My hope is that you will actively try to use CLI regularly for a small number of
 
 Some opinions, but with justification
 
-I am not an expert
+I am not an expert or "power user", just a CLI user mostly on Linux.
 
 Some AI help
 
-## WTF is a shell?
+## Limitations
 
+It is hard to change.
+Microsoft Office is hard to escape.
+
+## What is a shell?
+
+A shell is 
 Provides access to low-level (closer to computer) tools
 
 Utilities versus programs
 
 Windows offers multipler shells, with some significant differences
 
-Using a shell in Linux is almost certaintly easier, but the transition to Linux is not and I am not encouraging it
+Using a shell in Linux is almost certaintly easier, but the transition to Linux is not and I am not encouraging it.
 
 Shell in Mac OS: Terminal, just like Linux 
+
+## Shell and graphical programs
+
+Graphical programs interact with shell 
+
+Shell commands more stable
+
+Mouse and menu usage has gone far beyond what is good for user efficiency
 
 ## Text files
 
@@ -84,6 +98,8 @@ Autocomplete
 Changing environment variables
 
 Automate tasks (crontab?)
+
+system like htop?
 
 ## AI in Windows CLI
 
