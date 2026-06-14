@@ -112,6 +112,51 @@ First, fetch, with this:
 git fetch
 ```
 
+In your terminal, it might look like this:
+
+```
+sasha@sasha-thinkpad-T470s:~/GitHub_repos/git-playground$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1015 bytes | 338.00 KiB/s, done.
+From github.com:AU-BCE-EE/git-playground
+   7a9e08a..6b192b9  main       -> origin/main
+```
+
+`git fetch` downloads git history but does not actually update your local copy of the files.
+
+At this point, you check the current status of things with `git status`.
+This is actually a very handy command.
+
+```
+sasha@sasha-thinkpad-T470s:~/GitHub_repos/git-playground$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+```
+
+So you can see that your local branch is behind the latest version of the repo.
+And the hint to `pull` is a good one.
+You should have nothing to commit, so there is no chance of a conflict, so go ahead and pull.
+
+```
+sasha@sasha-thinkpad-T470s:~/GitHub_repos/git-playground$ git pull
+Updating 7a9e08a..6b192b9
+Fast-forward
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+```
+
+In fact, you can generally just `pull` directly.
+
+
+
+
+
 
 
 
