@@ -1,5 +1,6 @@
 # Introduction to the command line interface (CLI)
 
+# Background
 ## Objectives
 
 * Explain the basics of CLI for different OS
@@ -23,7 +24,7 @@ Some AI help
 It is hard to change.
 Microsoft Office is hard to escape.
 
-## What is a shell?
+# What is a shell?
 
 A shell is a program that provides text-based access to a computer operating system.
 Here are some visual examples.
@@ -38,7 +39,7 @@ Shells provide access to various programs that are built into the shell or insta
 This includes simple interactive commands like `ls` for listing directory contents but also `Rscript` which will evaluate a script in R, doing whatever the script says.
 
 
-## Shells among operating systems 
+# Shells among operating systems 
 
 On Linux, the most popular shell is called *bash* (For Bourne Again SHell--search out the history if interested).
 Alternatives exist but differences are not major.
@@ -57,8 +58,6 @@ Why?
 * it is simpler to learn than PowerShell, which actually provides an object-oriented pipeline, quite distinct from the text-based approach of other shells,
 * it works very well with Git (it was written for this purpose) and is automatically installed when you install Git,
 * and it uses the same Linux commands that make up the foundation of CLI work the world uses. 
-
-## CLI vs. GUI
 
 Most or at least some of the programs you directly work with have a graphical user interface (GUI).
 Graphical programs provide another way to interact with the OS.
@@ -92,6 +91,41 @@ Now you should be able to press that combination `Ctrl + Alt + T` to open Git Ba
 Here it what it should look like after opening:
 
 <img width="1075" height="505" alt="image" src="https://github.com/user-attachments/assets/a6adaccd-a2ba-41b3-95c9-7348bf599a4d" />
+
+# Baby steps: autocompletion, `cd`, `ls`, and `mkdir`
+
+The `cd` command is used to *c*hange *d*irectories.
+Type 
+```
+cd Doc
+```
+
+and hit `Tab`.
+Bash should extend `Doc` to `Documents` through what is called *autocompletion*--a super convenient feature of shells.
+If you have multiple directories that start with those three letters you will see a list of possibilities, which is a hint that you need to type more letters.
+Autocomplete is typically used in every command!
+
+Go ahead and change the directory to `Documents`.
+Now list all the files and directories present with the command for list:
+
+```
+ls
+```
+
+Then get back to the starting point with
+
+```
+cd ..
+```
+
+The `..` means "go up one level".
+You may have already seen it in relative file paths in R or Python scripts.
+
+Here is what all that looked like for me:
+
+<img width="1527" height="576" alt="image" src="https://github.com/user-attachments/assets/1938d44d-caac-498e-9b3d-d3121808607e" />
+
+Do you see a list of suggested directories that start with `Do`?
 
 
 ## Git and GitHub via CLI
