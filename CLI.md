@@ -56,13 +56,43 @@ Why?
 
 * it is simpler to learn than PowerShell, which actually provides an object-oriented pipeline, quite distinct from the text-based approach of other shells,
 * it works very well with Git (it was written for this purpose) and is automatically installed when you install Git,
-* and it uses the same Linux commands that most of the CLI world uses on Linux machines. 
+* and it uses the same Linux commands that make up the foundation of CLI work the world uses. 
 
 ## CLI vs. GUI
 
 Most or at least some of the programs you directly work with have a graphical user interface (GUI).
 Graphical programs provide another way to interact with the OS.
 In some cases (Git Desktop, for example), GUIs actually invoke command-line tools.
+
+# Getting started with Git Bash
+
+## Opening bash
+
+Open up Git Bash.
+You can use the same approach you use for other programs:
+
+1. Hit the Windows key,
+2. type (or start typing) `git bash`, and 
+3. click on the correct program.
+
+<img width="1188" height="382" alt="image" src="https://github.com/user-attachments/assets/2fdc9d9e-6011-4288-96c2-2be9afdf7ab7" />
+
+But, one of the first things we'll do is set up a keyboard shortcut so you can open your version of Bash the same way most of the world does.
+
+1. Request admin privileges with Heimdal Agent,
+2. hit the Windows key,
+3. type (or start typing) `git bash`,  
+4. **right-click** on the correct program and select "Open file location",
+5. right-click on the `Git Bash` shortcut that shows up in the folder that opens and select `Properties`,
+6. go to `Shortcut`,
+7. click in `Shortcut key` box and press `Ctrl`, `Alt`, and `t` together, and ensure that combination shows up in the input box, and
+8. click OK.
+
+Now you should be able to press that combination `Ctrl + Alt + T` to open Git Bash!
+Here it what it should look like after opening:
+
+<img width="1075" height="505" alt="image" src="https://github.com/user-attachments/assets/a6adaccd-a2ba-41b3-95c9-7348bf599a4d" />
+
 
 ## Git and GitHub via CLI
 
