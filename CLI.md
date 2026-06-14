@@ -123,7 +123,7 @@ You may have already seen it in relative file paths in R or Python scripts.
 
 Here is what all that looked like for me:
 
-<img width="1527" height="576" alt="image" src="https://github.com/user-attachments/assets/1938d44d-caac-498e-9b3d-d3121808607e" />
+<img width="1095" height="534" alt="image" src="https://github.com/user-attachments/assets/7868440c-7edd-49ce-97cd-501c7a7aa40d" />
 
 Do you see a list of suggested directories that start with `Do`?
 
