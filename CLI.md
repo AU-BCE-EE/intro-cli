@@ -125,10 +125,39 @@ Here is what all that looked like for me:
 
 <img width="1095" height="534" alt="image" src="https://github.com/user-attachments/assets/7868440c-7edd-49ce-97cd-501c7a7aa40d" />
 
-Do you see a list of suggested directories that start with `Do`?
+Do you also have the little tilde `~` after `MINGW64`?
+If so, that means you are in your home directory.
+If not, go there with
 
+```
+cd ~
+```
 
-## Git and GitHub via CLI
+On my keyboard I get the tilde with `Alt Gr` and the key to the left of `Enter` that has `^`, `¨`, and `~`.
+It is unfair that access to these important characters is much easier on American keyboards, but oh well.
+
+Now that we are all in our home directory, let's create a brand new directory for the GitHub repositories for this workshop, and potentially for your future work.
+Enter this, which creates (**m**a**k**es) a **dir**ectory named `repos`:
+
+```
+mkdir repos
+```
+
+Then try to `cd` into the new subdirectory.
+Remember tab completion!
+Here is what I see:
+
+<img width="1234" height="541" alt="image" src="https://github.com/user-attachments/assets/a4f212aa-b37b-4bc3-947a-6c2f53e31869" />
+
+We want to be in this same directory for the next section, but for practice, close the shell with
+
+```
+exit
+```
+
+Then you can open it again and `cd` to the right directory before starting the next section.
+
+# Git via CLI
 
 Let's practice the CLI with the `git-playground` repo.
 
@@ -145,14 +174,11 @@ You don't just get the current version of the files, but the entire ćommit hist
 
 Let's clone the repo!
 
-1. Browse to the repo. 
+1. Browse to the repo in an internet browser. 
    I find the easiest approach is to open a browser like Firefox or Brave, hit `Ctrl + L`, and start typing `github.com/AU` and use autocomplete and the `End` key to get to the right place, or at least the searchable list of repos. 
 2. Click the green `Code` button and, if needed, select `HTTPS`, as shown below. Copy (to your clipboard) the `https...` bit.
-3. Open Git Bash!
-4. Use `cd` to get to the correct directory, that is, the directory where you keep your local GitHub repos. You don't actually *have* to keep them all in the same location, but you should have an idea of where they are. If you have no idea, go through GitHub Desktop to find out.
-
-Now we are ready for some Git commands.
-I'll start a new list for them.
+3. Open Git Bash with `Ctrl + Alt + T`.
+4. Use `cd` to get to the correct directory, `repos`.
 
 Finally, time to clone!
 Enter this command:
@@ -161,8 +187,44 @@ Enter this command:
 git clone https://github.com/AU-BCE-EE/git-playground.git
 ```
 
-where that `https:...` is pasted in with `Ctrl + Shift + v`. 
+where that `https:...` is pasted in with `Shift + Ins`. 
 This will download the repo contents and put them in a local directory with the name `git-playground`.
+Here is what I see:
+
+<img width="1129" height="539" alt="image" src="https://github.com/user-attachments/assets/24e05e34-6855-45cd-b781-14d7bdd6a9e9" />
+
+Use `ls` to check that you have the new subdirectory.
+Then open up Windows File Explorer to confirm that you really do have a directory with this name with the right contents!
+Of *course* you do, but I want to help you link command line stuff with the more graphical approach you might be used to.
+
+Now, you might automatically go to your track pad or mouse and start awkwardly, slowly, moving the arrow over to that tiny yellow square or wherever you click to open up File Explorer. . . 
+Don't!
+Try a CLI approach, please!
+Back in Bash, type 
+
+```
+expl
+```
+
+and hit `Tab` to get
+
+```
+explorer
+```
+
+and hit `Enter`. 
+Voila--you get File Explorer open in the correct directory!
+CL work is amazingly logical sometimes.
+
+Here is what I see:
+
+<img width="1120" height="478" alt="image" src="https://github.com/user-attachments/assets/46e521d0-ab58-4fe7-adbf-202750a80cf0" />
+
+And when I double-click on `git-playground` I see the contents, just like any other directory you might eplore in Windows File Explorer.
+
+
+
+
 
 ## Fetching and pulling
 
