@@ -465,16 +465,8 @@ Here is what I've done:
 <img width="1240" height="597" alt="image" src="https://github.com/user-attachments/assets/f9a51332-0a6d-48f7-89e8-c2019cb202f1" />
 
 Now, let's have a couple of us `add`, `commit`, and `push`.
-See what happens and we'll use it as a problem to sort out in the next section.
-
-# More advanced git
-
-Let's talk about these `git` commands:
-
-* `restore`
-* `restore --staged`
-* `pull --rebase`
-* `merge`
+See what happens and we'll use it as a problem to sort out in a later section.
+If you run into a problem, set it aside and move on!
 
 # Searching within files
 
@@ -508,9 +500,15 @@ To see them, using the `--help` option, or ask an AI tool.
 
 # Practice and CSV files in a text editor
 
-Clone this repo: 
+Clone this repo: <https://github.com/AU-BCE-EE/Pedersen-2025-MAG>.
+Find a csv file, e.g., using `ls`.
+And open it up in Nano.
 
-
+# More advanced git
+* `restore`
+* `restore --staged`
+* `pull --rebase`
+* `merge`
 
 
 ## Basic utilities
