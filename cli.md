@@ -6,10 +6,15 @@ The command line interface (CLI) may seem outdated if you are used to working wi
 In this workshop you will get an introduction to CLI work in Windows.
 But, the commands will be directly transferable to Linux and macOS.
 
-## Approach
+## Approach and organization
 
 This will be an informal, trial-and-error-based, demonstration and type-along workshop.
 Try to do everything that I do!
+
+About organization. . . there isn't much here.
+I could argue that the content follows the reality of CLI work, where a mix of commands are used together within one task.
+In truth, that is part of the reason organization is lacking here.
+The other part is that I didn't want to invest too many hours in a one hour workshop!
 
 ## Objectives
 
@@ -38,6 +43,8 @@ But do try to come in with an open mind, and consider that a little investment o
 
 I have used an AI tool (Claude Code) to get some advice for this workshop and document, including a discussion on which shell to focus on, but the content is mine and for better or worse I actually wrote this document. 
 I expect Claude Code to take a look when I am done to correct inaccurate language and point out other mistakes or omissions.
+
+Now, for some actual CLI content!
 
 # What is a shell?
 
@@ -79,8 +86,6 @@ Although we are focusing on Git Bash, you should try out PowerShell at some poin
 
 # Getting started with Git Bash
 
-## Opening Git Bash
-
 You can use the same approach you use for other programs:
 
 1. Hit the Windows key,
@@ -90,8 +95,6 @@ You can use the same approach you use for other programs:
 You should see somethig like this:
 
 <img width="1188" height="382" alt="image" src="https://github.com/user-attachments/assets/2fdc9d9e-6011-4288-96c2-2be9afdf7ab7" />
-
-## A keyboard shortcut to open Git Bash
 
 Let's set up a keyboard shortcut so you can open your version of Bash the same way most of the world does, by pressing `Ctrl + Alt + T`!
 Then you will start to feel like a power user.
@@ -113,8 +116,6 @@ Here it what it should look like after opening:
 For some reason, with that approach my version opens in my home directory, indicated by the tilde `~`.
 Does yours?
 
-## Basic commands and tab completion
-
 The `cd` command is used to **c**hange **d**irectories.
 Open up Git Bash, which I will just call Bash below, type 
 
@@ -134,11 +135,45 @@ Go ahead and change the directory to `Documents`.
 cd Documents
 ```
 
+Finally, close Bash with 
+
+```
+exit
+```
+
+You might be tempted to reach for your track pad or mouse and click on that little `x`, but typing `exit` is faster!
+
+# More Bash commands
+
+Now you know how to open a Bash shell and navigate to a particular location.
+Let's learn some more handy Bash commands.
+Open it up again, and `cd` to `Documents` or a directory of your choice.
+
 Now list all the files and directories present with the `ls` command for **l**i**s**t:
 
 ```
 ls
 ```
+
+For more details, use 
+
+```
+ls -l
+```
+
+where the `-l` flag is for **l**ong.
+
+For more options, see the help details with the ubiquitous `--h` flag for`**h**elp.
+Pick one of the flags and try it.
+Good choices are `-R` and `-lh`.
+
+To list only a particular type of file, you can use *shell expansion*, e.g., for `xlsx` files, use this.
+
+```
+ls *.xlsx
+```
+
+But for searching for files, the `find` command is much more powerful.
 
 Then get back to the starting point with
 
@@ -151,7 +186,7 @@ You may have already seen it in relative file paths in R or Python scripts.
 Same idea!
 Isn't text-based stuff great?
 
-Here is what all that looked like for me:
+Here is what some of that looked like for me:
 
 <img width="1095" height="534" alt="image" src="https://github.com/user-attachments/assets/7868440c-7edd-49ce-97cd-501c7a7aa40d" />
 
@@ -188,8 +223,6 @@ We want to be in this same directory for the next section, but for practice, clo
 ```
 exit
 ```
-
-You might be tempted to reach for your track pad or mouse and click on that little `x`, but typing `exit` is faster!
 
 # Git via CLI
 
@@ -496,7 +529,8 @@ Here is an example.
 Tell me that isn't cool!
 Picture using it to search every one of your repos to find where you used some particular function.
 The `rg` command comes with a whole lot of options.
-To see them, using the `--help` option, or ask an AI tool.
+To see them, using the `--help` option to see the help pages.
+For better or worse, or ask an AI tool.
 
 # Practice and CSV files in a text editor
 
