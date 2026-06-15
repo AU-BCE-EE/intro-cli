@@ -17,7 +17,7 @@ Learning objectives are to:
 
 My hope is that you will actively try to use CLI regularly for a small number of common tasks after leaving this workshop, and seek out additional information to expand your knowledge of the CLI.
 
-## Warnings
+## Perspectives
 
 There are a lot of different ways to carry out any particular task on a computer.
 By joining this workshop, you have indicated that you have an interest in learning about a command line approach.
@@ -50,22 +50,23 @@ This includes simple interactive commands like `ls` for listing directory conten
 
 # Shells and operating systems 
 
-On Linux, the most popular shell is called *bash* (For **B**ourne **A**gain **Sh**ell--search the history if interested).
+On Linux, the most popular shell is called *Bash* (For **B**ourne **A**gain **Sh**ell--search the history if interested).
 Alternatives exist but differences are not major.
 
-macOS comes with a shell called *terminal*.
+macOS comes with a shell called *Terminal*.
 It was derived from Linux bash shell and most Linux commands work on macOS
 
 Windows is a bit more complicated.
 The older shell you may still see is called *Command Prompt* (incorrectly called *DOS* sometimes) but *PowerShell* is the modern Windows shell.
-PowerShell is different from Bash and related shells.
+PowerShell is different from Bash, macOS Terminal, and related shells.
 It offers an object-oriented pipeline to pass information from one shell program to another, while Bash other shells use only text.
 Commands in PowerShell are quite, well, powerful, but they have long names and are harder to learn than the more common Bash commands.
 
 For advanced work in Windows, like task automation, PowerShell is the obvious choice.
 But for what we typicaly do--git operations, running scripts, simple built-ins like `ls` and `mkdir` and `rm`, maybe `ssh`, and handy programs--Git Bash is a good choice and is what we will use here.
 It is easier to learn than PowerShell, works very well with Git (it was written for this purpose), and uses the same Linux commands that make up the foundation of CLI work the world uses. 
-However, most of what we will cover could be directly transferred to PowerShell.
+However, most of what we will cover can be directly transferred to PowerShell.
+Where there are differences, PowerShell will automatically convert commands.
 
 # Getting started with Git Bash
 
@@ -230,7 +231,7 @@ explorer .
 and hit `Enter`. 
 Ta-da!
 You get File Explorer open in the correct directory.
-The CLI is amazingly logical sometimes.
+The CLI can be quick.
 
 Here is what I see:
 
@@ -265,7 +266,7 @@ From github.com:AU-BCE-EE/git-playground
 
 `git fetch` downloads git history but does not actually update your local copy of the files.
 
-At this point, you check the current status of things with `git status`.
+At this point, you can check the current status of things with `git status`.
 This is actually a very handy command.
 
 ```
@@ -277,9 +278,9 @@ Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
 nothing to commit, working tree clean
 ```
 
-So you can see that your local branch is behind the latest version of the repo.
+So you can see that your local files are behind the latest version of the repo.
 And the hint to `pull` is a good one.
-You should have nothing to commit, so there is no chance of a conflict, so go ahead and pull.
+You should have nothing to commit (`git status` would tell you), so there is no chance of a conflict, so go ahead and pull.
 
 ```
 sasha@sasha-thinkpad-T470s:~/GitHub_repos/git-playground$ git pull
@@ -310,6 +311,93 @@ Most important for me is the list of changed files--just one here.
 
 If I am ready to commit this change, I can do that in two steps:`git add ...` and `git commit ...`.
 The first "stages" the files and the second actually commits.
+
+The`git add` command can be used to add a specific file or can use metacharacters to match multiple files.
+
+Now, let's say instead of editing a file I create a new one.
+For example, I just created a short R script called `none.R`.
+We can confirm that it exists and is not staged with `git status`.
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/git-playground (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        none.R
+
+nothing added to commit but untracked files present (use "git add" to track)
+``` 
+
+To add it, and only it, I can use this:
+
+```
+git add none.R
+```
+
+To add everything that has been edited, added, or deleted, use `git add .`.
+
+
+```
+git add .
+```
+
+And I check with `git status`:
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/git-playground (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   none.R
+```
+
+And finally, when I am ready, commit with `git commit -m ...`.
+The `-m` option means a commit message will go on the same line, like this.
+
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/git-playground (main)
+$ git commit -m 'add script none.R'
+[main 2a14927] add script none.R
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 none.R
+```
+
+Let's make sure it did what we wanted, with `git status` of course!
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/git-playground (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+
+As the hint suggest, we probably want to `push` this commmit now.
+When collaborating, there is no good reason to delay pushing!
+
+
+```
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 280 bytes | 280.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/AU-BCE-EE/git-playground.git
+   51ea466..2a14927  main -> main
+```
+
+
 
 
 
