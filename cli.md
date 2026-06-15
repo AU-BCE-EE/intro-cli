@@ -499,15 +499,14 @@ Either way, you will need to close and reopen Bash to use Ripgrep.
 When you open it up, browse to the `intro-cli` repo directory and search for some particular text there using the `rg` command.
 Here is an example.
 
+<img width="1126" height="574" alt="image" src="https://github.com/user-attachments/assets/c594e722-5b55-4f26-982c-d32472b48e32" />
+
 Tell me that isn't cool!
 Picture using it to search every one of your repos to find where you used some particular function.
 The `rg` command comes with a whole lot of options.
-To see them, using the `--help` option.
+To see them, using the `--help` option, or ask an AI tool.
 
-
-
-
-# Ṕractice and CSV files in a text editor
+# Practice and CSV files in a text editor
 
 Clone this repo: 
 
