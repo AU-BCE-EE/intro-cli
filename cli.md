@@ -147,7 +147,8 @@ You might be tempted to reach for your track pad or mouse and click on that litt
 
 Now you know how to open a Bash shell and navigate to a particular location.
 Let's learn some more handy Bash commands.
-Open it up again, and `cd` to `Documents` or a directory of your choice.
+Open Bash up again, and `cd` to `Documents` or a directory of your choice.
+
 
 Now list all the files and directories present with the `ls` command for **l**i**s**t:
 
@@ -591,5 +592,30 @@ python
 PATH and other annoying Windows stuff
 
 # Linux comparison
+
+But first, here is a bit more on `cd` and tab completion.
+Let's say you want to get into your OneDrive directory.
+
+I try
+
+```
+cd One
+```
+
+and hit `Tab` to get this:
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~
+$ cd OneDrive
+```
+
+OK, maybe.
+So let's see what it is in with 
+
+UNI+au594831@PW0E5F78 MINGW64 ~/OneDrive
+$ ls
+desktop.ini
+
+
 
 
