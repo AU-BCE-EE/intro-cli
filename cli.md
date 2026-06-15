@@ -43,37 +43,33 @@ Bash shell on Ubuntu Linux, using the `rg` (ripgrep) to search for a particular 
 <img width="1474" height="1006" alt="image" src="https://github.com/user-attachments/assets/9f61a9f6-f316-4321-8fc0-9f86aaaf8448" />
 PowerShell in Windows running some Git commands.
 
+
 Shells provide access to various programs that are built into the shell or installed on top.
 This includes simple interactive commands like `ls` for listing directory contents but also `Rscript` which will evaluate a script in R, doing whatever the script says.
 
 
-# Shells among operating systems 
+# Shells and operating systems 
 
-On Linux, the most popular shell is called *bash* (For Bourne Again SHell--search out the history if interested).
+On Linux, the most popular shell is called *bash* (For **B**ourne **A**gain **Sh**ell--search the history if interested).
 Alternatives exist but differences are not major.
 
 macOS comes with a shell called *terminal*.
-It was derived from Linux bash shell and most Linux commands work just as well on macOS
+It was derived from Linux bash shell and most Linux commands work on macOS
 
 Windows is a bit more complicated.
-The older shell was *Command Prompt* (inaccurately called *DOS* sometimes) but there are now multiple modern alternatives: *PowerShell*, Git Bash (which we will use), and WSL.
-PowerShell is the real Windows shell, while Git Bash and WSL provide more or less access to Linux commands.
-PowerShell is different from the other shells.
-For advanced work in Windows, like task automation and ..., PowerShell is the obvious choice.
-But for what we typicaly do--git operations, running scripts, ssh, simple built-ins, and handy programs--Git Bash is a good choice.
-Why?
+The older shell you may still see is called *Command Prompt* (incorrectly called *DOS* sometimes) but *PowerShell* is the modern Windows shell.
+PowerShell is different from Bash and related shells.
+It offers an object-oriented pipeline to pass information from one shell program to another, while Bash other shells use only text.
+Commands in PowerShell are quite, well, powerful, but they have long names and are harder to learn than the more common Bash commands.
 
-* it is simpler to learn than PowerShell, which actually provides an object-oriented pipeline, quite distinct from the text-based approach of other shells,
-* it works very well with Git (it was written for this purpose) and is automatically installed when you install Git,
-* and it uses the same Linux commands that make up the foundation of CLI work the world uses. 
-
-Most or at least some of the programs you directly work with have a graphical user interface (GUI).
-Graphical programs provide another way to interact with the OS.
-In some cases (Git Desktop, for example), GUIs actually invoke command-line tools.
+For advanced work in Windows, like task automation, PowerShell is the obvious choice.
+But for what we typicaly do--git operations, running scripts, simple built-ins like `ls` and `mkdir` and `rm`, maybe `ssh`, and handy programs--Git Bash is a good choice and is what we will use here.
+It is easier to learn than PowerShell, works very well with Git (it was written for this purpose), and uses the same Linux commands that make up the foundation of CLI work the world uses. 
+However, most of what we will cover could be directly transferred to PowerShell.
 
 # Getting started with Git Bash
 
-## Opening bash
+## Opening Git Bash
 
 Open up Git Bash.
 You can use the same approach you use for other programs:
@@ -84,7 +80,9 @@ You can use the same approach you use for other programs:
 
 <img width="1188" height="382" alt="image" src="https://github.com/user-attachments/assets/2fdc9d9e-6011-4288-96c2-2be9afdf7ab7" />
 
-But, one of the first things we'll do is set up a keyboard shortcut so you can open your version of Bash the same way most of the world does.
+## A keyboard shortcut to open Git Bash
+
+Let's set up a keyboard shortcut so you can open your version of Bash the same way most of the world does.
 
 1. Request admin privileges with Heimdal Agent,
 2. hit the Windows key,
@@ -100,18 +98,19 @@ Here it what it should look like after opening:
 
 <img width="1075" height="505" alt="image" src="https://github.com/user-attachments/assets/a6adaccd-a2ba-41b3-95c9-7348bf599a4d" />
 
-# Baby steps: autocompletion, `cd`, `ls`, and `mkdir`
+## Basic commands and tab completion
 
-The `cd` command is used to *c*hange *d*irectories.
-Type 
+The `cd` command is used to **c**hange **d**irectories.
+Open up Git Bash, which I will just call Bash below, type 
+
 ```
 cd Doc
 ```
 
 and hit `Tab`.
-Bash should extend `Doc` to `Documents` through what is called *autocompletion*--a super convenient feature of shells.
+Bash should extend `Doc` to `Documents` through what is called *tab completion*--a very helpful feature of shells.
 If you have multiple directories that start with those three letters you will see a list of possibilities, which is a hint that you need to type more letters.
-Autocomplete is typically used in every command!
+Tab completion is typically used in every command!
 
 Go ahead and change the directory to `Documents`.
 Now list all the files and directories present with the command for list:
@@ -142,7 +141,7 @@ cd ~
 ```
 
 On my keyboard I get the tilde with `Alt Gr` and the key to the left of `Enter` that has `^`, `¨`, and `~`.
-It is unfair that access to these important characters is much easier on American keyboards, but oh well.
+(It is unfair that access to these important characters is much easier on American keyboards, but oh well.)
 
 Now that we are all in our home directory, let's create a brand new directory for the GitHub repositories for this workshop, and potentially for your future work.
 Enter this, which creates (**m**a**k**es) a **dir**ectory named `repos`:
@@ -167,7 +166,8 @@ Then you can open it again and `cd` to the right directory before starting the n
 
 # Git via CLI
 
-Let's practice the CLI with the `git-playground` repo.
+Let's practice the CLI using the `git-playground` repo.
+Open up Bash and `cd` to the `repos` directory.
 
 ## Authentication
 First, authentication. 
@@ -220,19 +220,23 @@ and hit `Tab` to get
 explorer
 ```
 
+and then type a space and `.` to finally have this:
+
+```
+explorer .
+```
+
+
 and hit `Enter`. 
-Voila--you get File Explorer open in the correct directory!
-CL work is amazingly logical sometimes.
+Ta-da!
+You get File Explorer open in the correct directory.
+The CLI is amazingly logical sometimes.
 
 Here is what I see:
 
 <img width="1120" height="478" alt="image" src="https://github.com/user-attachments/assets/46e521d0-ab58-4fe7-adbf-202750a80cf0" />
 
 And when I double-click on `git-playground` I see the contents, just like any other directory you might eplore in Windows File Explorer.
-
-
-
-
 
 ## Fetching and pulling
 
@@ -286,10 +290,17 @@ Fast-forward
 ```
 
 In fact, you can generally just `pull` directly.
+That is what I typically do.
+We will discuss some complications later (below).
 
+# Editing, committing, and pushing
 
+Now let me make a local change to a file in the repo.
+Once that change is saved I should see it when I check the repo status with 
 
-
+```
+git status
+```
 
 
 
