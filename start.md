@@ -52,4 +52,4 @@ Once authenticated, you should see something like this:
 # That's it!
 
 If you were able to carry out those steps without any problems, you are all set.
-If there were problems in any step, please let me know by [email](mailtto:sasha.hafner@bce.au.dk).
+If there were problems in any step, please let me know by [email](mailto:sasha.hafner@bce.au.dk).
