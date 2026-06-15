@@ -36,10 +36,11 @@ And `mkdir` *m*a*k*es *dir*ectories.
 You can copy and paste the code if you prefer (that might be the easiest way to get a tilde `~`).
 To paste into Git Bash press `Shift + Ins`.
 
-Now see if you can clone a repo from GitHub by entering this command.
+Now see if you can clone a repo from GitHub by entering these commands.
 
 
 ```
+cd repos
 git clone https://github.com/AU-BCE-EE/git-playground.git
 ```
 
