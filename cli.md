@@ -460,8 +460,14 @@ nano sasha.md
 
 Add some content.
 You can get information on Markdown from [this handy guidance document](https://github.com/AU-BCE-EE/guidance-GitHub/blob/main/markdown.md).
+Here is what I've done:
 
-Simple text editors
+<img width="1240" height="597" alt="image" src="https://github.com/user-attachments/assets/f9a51332-0a6d-48f7-89e8-c2019cb202f1" />
+
+Now, let's have a couple of us `add`, `commit`, and `push`.
+See what happens and we'll use it as a problem to sort out in the next section.
+
+# More advanced git
 
 ## Basic utilities
 
