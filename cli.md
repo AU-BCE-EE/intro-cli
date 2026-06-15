@@ -302,7 +302,14 @@ Once that change is saved I should see it when I check the repo status with
 git status
 ```
 
+This is what I see:
 
+<img width="1096" height="512" alt="image" src="https://github.com/user-attachments/assets/6fe8b8f6-d006-4222-a023-ab75e468043c" />
+
+Most important for me is the list of changed files--just one here.
+
+If I am ready to commit this change, I can do that in two steps:`git add ...` and `git commit ...`.
+The first "stages" the files and the second actually commits.
 
 
 
