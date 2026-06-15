@@ -64,7 +64,7 @@ macOS comes with a shell called *Terminal*.
 It was derived from Linux bash shell and most Linux Bash commands work on macOS.
 
 Windows is a bit more complicated.
-The older shell you may still see is called *Command Prompt* (incorrectly called *DOS* sometimes) but *PowerShell* is the modern Windows shell.
+The older shell you may still see is called *Command Prompt* (incorrectly called *DOS* sometimes but called correctly *cmd* as well) but *PowerShell* is the modern Windows shell.
 PowerShell is different from Bash, macOS Terminal, and related shells.
 It offers an object-oriented pipeline to pass information from one shell program to another, while Bash other shells use only text.
 Commands in PowerShell are quite, well, powerful, but they have long names and are harder to learn than the more common Bash commands.
@@ -468,6 +468,51 @@ Now, let's have a couple of us `add`, `commit`, and `push`.
 See what happens and we'll use it as a problem to sort out in the next section.
 
 # More advanced git
+
+Let's talk about these `git` commands:
+
+* `restore`
+* `restore --staged`
+* `pull --rebase`
+* `merge`
+
+# Searching within files
+
+An advantage of working with text files is you can easily search inside them.
+And Ripgrep is an excellent modern command line tool for doing just that.
+You can install it by running this command in Bash:
+
+```
+winget install BurntSushi.ripgrep.MSVC
+```
+
+If it works, it uses yet another command line tool, winget, to download and install the program.
+
+If it does not work, try this!
+
+1. Download the ripgrep-X.X.X-x86_64-pc-windows-msvc.zip from ripgrep's GitHub releases
+2. In Git Bash: mkdir -p ~/bin then extract rg.exe into ~/bin
+3. Add export PATH="$HOME/bin:$PATH" to ~/.bashrc
+4. Restart Git Bash, confirm with rg --version
+
+Either way, you will need to close and reopen Bash to use Ripgrep.
+When you open it up, browse to the `intro-cli` repo directory and search for some particular text there using the `rg` command.
+Here is an example.
+
+Tell me that isn't cool!
+Picture using it to search every one of your repos to find where you used some particular function.
+The `rg` command comes with a whole lot of options.
+To see them, using the `--help` option.
+
+
+
+
+# Ṕractice and CSV files in a text editor
+
+Clone this repo: 
+
+
+
 
 ## Basic utilities
 
