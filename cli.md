@@ -4,7 +4,7 @@
 
 The command line interface (CLI) may seem outdated if you are used to working with graphical user interfaces, but text-based commands and output are still the most efficient way to carry out many different types of computer tasks.
 In this workshop you will get an introduction to CLI work in Windows.
-The commands will be directly transferable to Linux and macOS.
+But, the commands will be directly transferable to Linux and macOS.
 
 ## Objectives
 
