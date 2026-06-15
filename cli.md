@@ -1,28 +1,35 @@
 # Introduction to the command line interface (CLI)
 
-# Background
+# Introduction to the introduction
+
+The command line interface (CLI) may seem outdated if you are used to working with graphical user interfaces, but text-based commands and output are still the most efficient way to carry out many different types of computer tasks.
+In this workshop you will get an introduction to CLI work in Windows.
+The commands will be directly transferable to Linux and macOS.
+
 ## Objectives
 
-* Explain the basics of CLI for different OS
-* Introduce you to concepts and practice of CLI in Windows
-* Convince you that CLI is better for some tasks
-* Show that CLI is quicker for some tasks
-* Show how AI you learn CLI tasks
+Learning objectives are to:
+
+* understand the basics of shells,
+* be comfortable with basic CLI tasks in Git Bash in Windows, 
+* effectively use git via the CLI, and
+* learn more about CLI work after leaving this workshop.
 
 My hope is that you will actively try to use CLI regularly for a small number of common tasks after leaving this workshop, and seek out additional information to expand your knowledge of the CLI.
 
 ## Warnings
 
-Some opinions, but with justification
+There are a lot of different ways to carry out any particular task on a computer.
+By joining this workshop, you have indicated that you have an interest in learning about a command line approach.
+But there are many options for working in a CLI!
+So I have had to make decisions about what we should do in this workshop and how we should do it.
+I am not an expert or "power user", but just a regular CLI user (like most Linux users) with my own opinions.
+I have tried to pick the most general and so userful approaches, but be aware that there are other ways to do the operations we will do here!
 
-I am not an expert or "power user", just a CLI user mostly on Linux.
-
-Some AI help
-
-## Limitations
-
-It is hard to change.
-Microsoft Office is hard to escape.
+For my part, I recognize that it is hard to change established practice, and the GUI-based approach popular in our work circles (including Microsoft Office) is hard to escape.
+It may be you try the CLI here and decide it is not a good fit.
+No problem if so!
+But do try to come in with an open mind, and consider that a little investment of effort now can save a lot of time and frustration later.
 
 # What is a shell?
 
