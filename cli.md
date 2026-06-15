@@ -340,7 +340,19 @@ Most important for me is the list of changed files--just one here.
 If I am ready to commit this change, I can do that in two steps:`git add ...` and `git commit ...`.
 The first "stages" the files and the second actually commits.
 
-The`git add` command can be used to add a specific file or can use metacharacters to match multiple files.
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/git-playground (main)
+$ git add README.md
+```
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/git-playground (main)
+$ git commit -m 'Add a bit to README.md'
+[main 15ad5ef] Add a bit to README.md
+ 1 file changed, 2 insertions(+)
+```
+
+The `-m` option means a commit message will go on the same line, like above.
 
 Now, let's say instead of editing a file I create a new one.
 For example, I just created a short R script called `none.R`.
@@ -365,6 +377,7 @@ To add it, and only it, I can use this:
 git add none.R
 ```
 
+The`git add` command can be used to add a specific file or can use metacharacters to match multiple files.
 To add everything that has been edited, added, or deleted, use `git add .`.
 
 
@@ -386,8 +399,6 @@ Changes to be committed:
 ```
 
 And finally, when I am ready, commit with `git commit -m ...`.
-The `-m` option means a commit message will go on the same line, like this.
-
 
 ```
 UNI+au594831@PW0E5F78 MINGW64 ~/repos/git-playground (main)
@@ -425,37 +436,30 @@ To https://github.com/AU-BCE-EE/git-playground.git
    51ea466..2a14927  main -> main
 ```
 
+We will come back to some more advanced Git commands later.
+For now, let's take a look at text files.
 
-
-
-
-fetch and pull
-
-add and commit
-
-push
-
-restore
-restore --staged
-clean
-
-log
-
-checkout
-
-merge
-
-gh commands. . .
-
-
-
-## Text files
+# Text files
 
 Why do you need sophisticated formatting to write notes, an abstract, or even a paper?
-
 Why use software with high overhead when a simpler approach works?
+Have you ever had a problem with a csv file that you could not understand because of the automatic (and hidden) conversion done by Excel? 
+Were you ever clueless about what changes were made in a `docx` or `xlsx` file even if you used Git or saved multiple version`s?
+These are all reasons to use text files!
 
-Use files that can be tracked.
+Text files are great because they can be tracked easily with git.
+They are also lightweight, and the "text editors" (software programs that can be used to view and edit them) can also be very lightweight. 
+
+Notepad is not terrible but Git Bash comes with a lightweight text editor called Nano that you can access right from the CLI.
+Give it a try.
+`cd` your way into `repos/git-playground` and create a new file with your name like this
+
+```
+nano sasha.md
+```
+
+Add some content.
+You can get information on Markdown from [this handy guidance document](https://github.com/AU-BCE-EE/guidance-GitHub/blob/main/markdown.md).
 
 Simple text editors
 
