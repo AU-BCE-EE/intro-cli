@@ -36,11 +36,12 @@ But do try to come in with an open mind, and consider that a little investment o
 A shell is a program that provides text-based access to a computer operating system.
 Here are some visual examples.
 
+<img width="818" height="576" alt="bash1" src="https://github.com/user-attachments/assets/ef843a19-6fc1-4ea9-a42f-5aaa6c1e06b7" />
+
 Bash shell on Ubuntu Linux, using the `rg` (ripgrep) to search for a particular word ("enrich") in an R package repository.
 
+<img width="1474" height="1006" alt="image" src="https://github.com/user-attachments/assets/9f61a9f6-f316-4321-8fc0-9f86aaaf8448" />
 PowerShell in Windows running some Git commands.
-
-....
 
 Shells provide access to various programs that are built into the shell or installed on top.
 This includes simple interactive commands like `ls` for listing directory contents but also `Rscript` which will evaluate a script in R, doing whatever the script says.
