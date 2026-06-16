@@ -570,6 +570,61 @@ To https://github.com/AU-BCE-EE/intro-cli.git
    c20ebbb..56ec102  main -> main
 ```
 
+And here is an example in a case where there were multiple changes (commits) in the same file.
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 943 bytes | 32.00 KiB/s, done.
+From https://github.com/AU-BCE-EE/intro-cli
+   5fa8b13..8512a4d  main       -> origin/main
+Auto-merging x
+CONFLICT (content): Merge conflict in x
+Automatic merge failed; fix conflicts and then commit the result.
+
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main|MERGING)
+$ nano x
+
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   x
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main|MERGING)
+$ git add .
+
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main|MERGING)
+$ git commit -m 'fix merge issue in x'
+[main 7d68341] fix merge issue in x
+
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 551 bytes | 183.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/AU-BCE-EE/intro-cli.git
+   8512a4d..7d68341  main -> main
+```
 
 To abandon edits of a particular file, use `git restore ...`.
 Be careful!

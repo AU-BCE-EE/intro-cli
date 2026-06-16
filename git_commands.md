@@ -24,4 +24,10 @@ git pull --rebase
 
 This adds your commit(s) on top of the commits you had been missing.
 
-If that does not work because of changes in a single file in multiple commits
+If that does not work because of changes in a single file in multiple commits, follow the instructions git gives you.
+
+1. `git pull` (already assumed to be done above)
+2. `nano conflicted_file.md` and edit the file
+3. `git add .`
+4. `git commit -m 'fix conflict message...'`
+5. `git push`
