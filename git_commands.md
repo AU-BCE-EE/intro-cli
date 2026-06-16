@@ -1,6 +1,11 @@
 # Git commands
 
-# Typical workflow for existing repository already cloned locally
+# Cloning
+
+`git clone https://github.com/AU-BCE-EE/intro-cli.git`
+
+
+# Typical workflow 
 
 1. `git status` to check for new local work (address if present with `git add ...` and `git commit -m ...` or `git restore ...` 
 2. `git pull` to download and merge in remote (GitHub) work (if merge conflict, see Merge conflict section below)
@@ -11,4 +16,12 @@
 
 # Merge problems
 
-If there is a merge issue, follow
+If a push is rejected because of changes in the remote repo that you do not have, just pull first with the `--rebase` flag.
+
+```
+git pull --rebase
+```
+
+This adds your commit(s) on top of the commits you had been missing.
+
+If that does not work because of changes in a single file in multiple commits

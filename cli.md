@@ -532,6 +532,45 @@ Then after our individual commits, we can try this command, which will sort out 
 git pull --rebase
 ```
 
+Here is an example.
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
+$ git push
+To https://github.com/AU-BCE-EE/intro-cli.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/AU-BCE-EE/intro-cli.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
+$ git pull --rebase
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.01 KiB | 31.00 KiB/s, done.
+From https://github.com/AU-BCE-EE/intro-cli
+   629f285..c20ebbb  main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/AU-BCE-EE/intro-cli.git
+   c20ebbb..56ec102  main -> main
+```
+
+
 To abandon edits of a particular file, use `git restore ...`.
 Be careful!
 Regardless of what you may have done in e.g., a text editor (saved a file 100 times) `git restore` will revert back to the latest commit.
