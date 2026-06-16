@@ -267,7 +267,7 @@ Be sure to use them in the remainder of the workshop!
 # Git via CLI
 
 Let's practice the CLI using the `git-playground` repo.
-You can find a summary of Git commands in the [git_commands.md](https://github.com/AU-BCE-EE/intro-cli/blob/main/bash_commands.md) file.
+You can find a summary of Git commands in the [git_commands.md](https://github.com/AU-BCE-EE/intro-cli/blob/main/git_commands.md) file.
 Open up Bash (use your shortcut!) and `cd` to the `repos` directory.
 
 ## Authentication
