@@ -135,6 +135,9 @@ Go ahead and change the directory to `Documents`.
 cd Documents
 ```
 
+There are some important issues to understand with autocomplete and spaces in directory names.
+Try to `cd` into a directory with spaces in the name.
+
 Finally, close Bash with 
 
 ```
@@ -167,6 +170,8 @@ where the `-l` flag is for **l**ong.
 For more options, see the help details with the ubiquitous `--h` flag for`**h**elp.
 Pick one of the flags and try it.
 Good choices are `-R` and `-lh`.
+But to be honest, it is difficult to figure out how to use these commands from the help pages.
+AI tools are much easier.
 
 To list only a particular type of file, you can use *shell expansion*, e.g., for `xlsx` files, use this.
 
@@ -175,6 +180,14 @@ ls *.xlsx
 ```
 
 But for searching for files, the `find` command is much more powerful.
+For example, this will find all `xlsx` files, searching recursively.
+
+```
+`find . -name '*.xlsx'
+```
+
+Use the `-iname` flag for a case-insensitive search.
+Try `find`, tweaking the command to fit your files.
 
 Then get back to the starting point with
 
@@ -199,6 +212,7 @@ If not, go there with
 cd ~
 ```
 
+The tilde is another shortcut that can be used in multiple applications to mean your home directory.
 On my Danish keyboard I get the tilde with `Alt Gr` and the key to the left of `Enter` that has `^`, `¨`, and `~`.
 On my American keyboards I get it with `Shift` and the top left key that has a backtick quote and `~`, which is super easy. 
 Apparently the decision to use these odd characters was done by people using American or similar keyboards.
@@ -290,9 +304,7 @@ explorer .
 ```
 
 and hit `Enter`. 
-Ta-da!
 You get File Explorer open in the correct directory.
-The CLI can be quick.
 You may have to do this a few times before it is quick, but I would be very surprised if the mouse is faster.
 
 Here is what I see:
@@ -353,7 +365,8 @@ Fast-forward
 ```
 
 In fact, you can generally just `pull` directly.
-That is what I typically do.
+What it actually does is a `fetch` followed by a `merge`.
+See the `git_commands.md` file for a summary.
 We will discuss some complications later (below).
 
 # Editing, committing, and pushing
@@ -387,6 +400,17 @@ $ git commit -m 'Add a bit to README.md'
 ```
 
 The `-m` option means a commit message will go on the same line, like above.
+For a detailed comment, add at least two blank lines, like this.
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
+$ git commit -m 'short summary here
+>
+>
+> more details here
+> maybe across multiple
+> lines'
+```
 
 Now, let's say instead of editing a file I create a new one.
 For example, I just created a short R script called `none.R`.
@@ -498,9 +522,37 @@ Here is what I've done:
 
 <img width="1240" height="597" alt="image" src="https://github.com/user-attachments/assets/f9a51332-0a6d-48f7-89e8-c2019cb202f1" />
 
-Now, let's have a couple of us `add`, `commit`, and `push`.
-See what happens and we'll use it as a problem to sort out in a later section.
-If you run into a problem, set it aside and move on!
+Now, go ahead and `add` and `commit`.
+Don't `push` yet--because we have multiple changes going on at once this is one of those somewhat rare cases of simultaneous work where we will get some conflicts.
+Let's have just one of us commit and push first.
+
+Then after our individual commits, we can try this command, which will sort out the merge problem.
+
+```
+git pull --rebase
+```
+
+To abandon edits of a particular file, use `git restore ...`.
+Be careful!
+Regardless of what you may have done in e.g., a text editor (saved a file 100 times) `git restore` will revert back to the latest commit.
+
+```
+git restore README.md 
+```
+
+The `.` will abandon all new edits.
+
+```
+git restore .
+```
+
+And to abandon new files, use `git clean -i ...`.
+
+
+Conflicts due to simultaneous edits within a single file are not so simple.
+We will work through an example.
+The tips that Git provides are quite helpful in these cases.
+And of course, AI tools can help as well.
 
 # Searching within files
 
@@ -527,95 +579,89 @@ Here is an example.
 
 <img width="1126" height="574" alt="image" src="https://github.com/user-attachments/assets/c594e722-5b55-4f26-982c-d32472b48e32" />
 
-Tell me that isn't cool!
+Pretty neat, isn't it?
 Picture using it to search every one of your repos to find where you used some particular function.
 The `rg` command comes with a whole lot of options.
 To see them, using the `--help` option to see the help pages.
-For better or worse, or ask an AI tool.
+But for better or worse, AI is the easiest way to figure out these types of commands.
 
-# Practice and CSV files in a text editor
+# R and Python
 
-Clone this repo: <https://github.com/AU-BCE-EE/Pedersen-2025-MAG>.
-Find a csv file, e.g., using `ls`.
-And open it up in Nano.
+It is easy to run an R or Python script in a CLI.
+Why run a Python or R script using the CLI when you have a fancy integrated development environment (IDE) like R?
+For simplicity and speed.
+IDEs can have a lot of overhead--take a look at how long it takes RStudio or VS Code to open up, for example.
+Maybe it does not always make sense, but it will sometimes.
 
-# More advanced git
-* `restore`
-* `restore --staged`
-* `pull --rebase`
-* `merge`
+Furthermore, sometime you just need to run some throw-away code.
+For that the easiest approach is to run R or Python directly in Bash.
 
-
-## Basic utilities
-
-cd
-
-ls
-
-File search
-
-File content search
-
-command history
-
-explorer.exe .
-
-rm
-
-Autocomplete
-
-Changing environment variables
-
-Automate tasks (crontab?)
-
-system like htop?
-
-## AI in Windows CLI
-
-
-## Batch files?
-
-Do they still make sense, still used?
-
-
-## Run scripts
-
-Why?
-Why not?!
-RStudio has massive overhead.
-Use when needed, don't when not.
-
-Rscript
-
-python
-
-PATH and other annoying Windows stuff
-
-# Linux comparison
-
-But first, here is a bit more on `cd` and tab completion.
-Let's say you want to get into your OneDrive directory.
-
-I try
+Take a look at the tiny R script `scripts-R/make_plot.R`.
+Do it all using Bash and Nano!
+You can run that with the `Rscript` command.
 
 ```
-cd One
+cd scripts-R
+Rscript make_plot.R
 ```
 
-and hit `Tab` to get this:
+Use `ls` to see if an any files were created.
+
+You should see a new image file `plot.png`, and you would typically want to open it to check the plot.
+How could you do that?
+You might first open File Explorer through Bash and then double-click the file icon.
+That works, but you can also do this with any type of file:
 
 ```
-UNI+au594831@PW0E5F78 MINGW64 ~
-$ cd OneDrive
+start plot.png
 ```
 
-OK, maybe.
-So let's see what it is in with 
+To use R interactively, e.g., to quickly review how a function works or to run a quick demo, just use the `R` command.
 
-UNI+au594831@PW0E5F78 MINGW64 ~/OneDrive
-$ ls
-desktop.ini
+```
+R
+```
+
+And you get an interactive R console.
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
+$ R
 
 
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
 
+> rnorm(100)
+  [1]  0.25334611  0.02167572 -1.28615045  1.40557098  0.47263213 -0.25698101
+  [7]  0.21723387  0.17985242 -0.40445806 -0.70859933  0.90039993  0.28215297
+ [13] -0.23601972 -0.05814558 -2.03216295 -0.36225475  0.57600980 -0.06828380
+ [19] -0.86341833 -1.64173279  0.29208735  1.49082768 -0.99974765 -0.75378877
+ [25]  0.30640209  0.48457493 -0.81104261  0.33178440 -0.77233539  1.45220801
+ . . .
+ [97] -1.22865839  0.36316999  0.37929286  0.18193419
+> q()
+Save workspace image? [y/n/c]: n
+
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
+
+```
+
+Python behaves similarly. 
+
+# Exercise
+
+Do the following in Git Bash.
+
+1. Clone this repo: <https://github.com/AU-BCE-EE/Pedersen-2025-MAG>.
+2. Find a csv file, using an appropriate command.
+3. Open the file in Nano and check the delimiter.
+4. Find an R script named `main.R` and view it.
+5. Run the script in batch mode.
+6. Install any missing packages interactively in R and run your script again.
+7. Use the appropriate `git` command to see if any files were changed.
+8. Stage all those files.
+9. Change your mind and `restore` the staged files.
+10. Eliminate all the changes you made.
 
