@@ -6,7 +6,9 @@ Sasha D. Hafner (https://au.dk/sasha.hafner@bce.au.dk).
 # Introduction to the introduction
 
 The command line interface (CLI) may seem outdated if you are used to working with graphical user interfaces, but text-based commands and output are still the most efficient way to carry out many types of computer tasks.
-In this workshop you will get an introduction to CLI work in Windows.
+This document was written as a guide for a hands-on workshop on the CLI planned for June 2026 in Aarhus.
+But it could serve as a stand-alone introduction as well.
+The focus is CLI work in Windows.
 But, the commands will be directly transferable to Linux and macOS.
 
 ## Approach and organization
