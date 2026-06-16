@@ -89,7 +89,7 @@ Although we are focusing on Git Bash, you should try out PowerShell at some poin
 
 # Getting started with Git Bash
 
-You can use the same approach you use for other programs:
+Open Git Bash using the same approach you use for other programs:
 
 1. Hit the Windows key,
 2. type (or start typing) `git bash`, and 
@@ -251,6 +251,8 @@ We want to be in this same directory for the next section, but for practice, clo
 exit
 ```
 
+You can find a table with these Bash commands in [bash_commands.md](https://github.com/AU-BCE-EE/intro-cli/blob/main/bash_commands.md).
+
 # History 
 
 A handy feature of Bash (and presumably most shells) is command history.
@@ -265,6 +267,7 @@ Be sure to use them in the remainder of the workshop!
 # Git via CLI
 
 Let's practice the CLI using the `git-playground` repo.
+You can find a summary of Git commands in the [git_commands.md](https://github.com/AU-BCE-EE/intro-cli/blob/main/bash_commands.md) file.
 Open up Bash (use your shortcut!) and `cd` to the `repos` directory.
 
 ## Authentication
