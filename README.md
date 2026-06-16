@@ -420,6 +420,17 @@ This is what I see:
 
 Most important for me is the list of changed files--just one here.
 
+Git provides a handy way to see specific changes with `git diff ...`.
+With this, you can see changes in all changed files, but you can do the same kind of partial or complete file name matching used with other Git commands.
+
+```
+git diff .
+```
+
+Here is what `git diff . . .` can show.
+
+<img width="1145" height="734" alt="image" src="https://github.com/user-attachments/assets/daced883-5893-42c7-a5d6-21184fdcc8d5" />
+
 If I am ready to commit this change, I can do that in two steps:`git add ...` and `git commit ...`.
 The first "stages" the files and the second actually commits.
 
