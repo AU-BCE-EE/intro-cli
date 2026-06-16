@@ -808,6 +808,9 @@ R
 ```
 
 And you get an interactive R console.
+If you don't, you probably have a PATH variable problem.
+To fix it, you need to add the path of the R executable to the user PATH environment variable. 
+I can help!
 
 ```
 UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
@@ -853,6 +856,10 @@ This will launch Python interactively.
 ```
 winpty python
 ```
+
+Here is what I see:
+
+<img width="1166" height="574" alt="image" src="https://github.com/user-attachments/assets/4ba0e297-9838-44c9-9159-655898fd890f" />
 
 # Exercise
 
