@@ -53,7 +53,7 @@ Here are some visual examples.
 
 <img width="818" height="576" alt="bash1" src="https://github.com/user-attachments/assets/ef843a19-6fc1-4ea9-a42f-5aaa6c1e06b7" />
 
-*The Bash shell running in Ubuntu Linux, using the `rg` (ripgrep) to search for a particular word ("enrich") in an R package repository.*
+*The Bash shell running in Ubuntu Linux, using `rg` (ripgrep) to search for a particular word ("enrich") in an R package repository.*
 
 <img width="1474" height="1006" alt="image" src="https://github.com/user-attachments/assets/9f61a9f6-f316-4321-8fc0-9f86aaaf8448" />
 *PowerShell, the modern Windows shell, running some Git commands.*
@@ -67,17 +67,17 @@ We don't really need to be concerned with which commands call "builtins" and whi
 On Linux, the most popular shell is called *Bash* (For **B**ourne **A**gain **Sh**ell--search the history if interested).
 Alternatives exist but differences are not major.
 
-macOS comes with a shell called *Terminal*.
-It was derived from Linux bash shell and most Linux Bash commands work on macOS.
+macOS comes with a shell called *zsh* or, prior to 2019, Bash.
+The newer zsh, like Bash, came from a Unix precursor, and most Linux Bash commands work on macOS.
 
 Windows is a bit more complicated.
 The older shell you may still see is called *Command Prompt* (incorrectly called *DOS* sometimes but called correctly *cmd* as well) but *PowerShell* is the modern Windows shell.
-PowerShell is different from Bash, macOS Terminal, and related shells.
-It offers an object-oriented pipeline to pass information from one shell program to another, while Bash other shells use only text.
+PowerShell is different from Bash, zsh, and related shells.
+It offers an object-oriented pipeline to pass information from one shell program to another, while Bash and other shells use only text.
 Commands in PowerShell are quite, well, powerful, but they have long names and are harder to learn than the more common Bash commands.
 
 For advanced work in Windows, like task automation, PowerShell is the obvious choice.
-But for what we typicaly do--git operations, running scripts, simple built-ins like `ls` and `mkdir` and `rm`, maybe `ssh`, and handy programs--Git Bash is a good choice and is what we will use here.
+But for what we typically do--git operations, running scripts, simple built-ins like `ls` and `mkdir` and `rm`, maybe `ssh`, and handy programs--Git Bash is a good choice and is what we will use here.
 It is easier to learn than PowerShell, works very well with Git (it was written for this purpose), and uses the same Linux commands that make up the foundation of CLI work the world uses. 
 However, most of what we will cover can be directly transferred to PowerShell.
 Where there are differences, PowerShell will automatically recognize Bash commands like `ls` but does not include all the options available in Bash.
@@ -92,7 +92,7 @@ You can use the same approach you use for other programs:
 2. type (or start typing) `git bash`, and 
 3. click on the correct program.
 
-You should see somethig like this:
+You should see something like this:
 
 <img width="1188" height="382" alt="image" src="https://github.com/user-attachments/assets/2fdc9d9e-6011-4288-96c2-2be9afdf7ab7" />
 
@@ -109,7 +109,7 @@ Then you will start to feel like a power user.
 8. click OK.
 
 Now you should be able to press that combination `Ctrl + Alt + T` to open Git Bash.
-Here it what it should look like after opening:
+Here is what it should look like after opening:
 
 <img width="1075" height="505" alt="image" src="https://github.com/user-attachments/assets/a6adaccd-a2ba-41b3-95c9-7348bf599a4d" />
 
@@ -167,7 +167,7 @@ ls -l
 
 where the `-l` flag is for **l**ong.
 
-For more options, see the help details with the ubiquitous `--h` flag for`**h**elp.
+For more options, see the help details with the ubiquitous `-h` or `--help` flag for **h**elp.
 Pick one of the flags and try it.
 Good choices are `-R` and `-lh`.
 But to be honest, it is difficult to figure out how to use these commands from the help pages.
@@ -183,7 +183,7 @@ But for searching for files, the `find` command is much more powerful.
 For example, this will find all `xlsx` files, searching recursively.
 
 ```
-`find . -name '*.xlsx'
+find . -name '*.xlsx'
 ```
 
 Use the `-iname` flag for a case-insensitive search.
@@ -225,7 +225,7 @@ mkdir repos
 ```
 
 (In the past I'd used `GitHub-repos` or similar, but since GitHub is the only service I use for remote repos, Claude pointed out that this was kind of stupid.)
-Of course you can also just change the name of an existing directory.)
+Of course you can also just change the name of an existing directory.
 
 Then try to `cd` into the new subdirectory.
 Remember tab completion!
@@ -311,7 +311,7 @@ Here is what I see:
 
 <img width="1120" height="478" alt="image" src="https://github.com/user-attachments/assets/46e521d0-ab58-4fe7-adbf-202750a80cf0" />
 
-And when I double-click on `git-playground` I see the contents, just like any other directory you might eplore in Windows File Explorer.
+And when I double-click on `git-playground` I see the contents, just like any other directory you might explore in Windows File Explorer.
 
 ## Fetching and pulling
 
@@ -400,7 +400,7 @@ $ git commit -m 'Add a bit to README.md'
 ```
 
 The `-m` option means a commit message will go on the same line, like above.
-For a detailed comment, add at least two blank lines, like this.
+For a detailed commit message, add a blank line between the summary and the body, like this.
 
 ```
 UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
@@ -435,7 +435,7 @@ To add it, and only it, I can use this:
 git add none.R
 ```
 
-The`git add` command can be used to add a specific file or can use metacharacters to match multiple files.
+The `git add` command can be used to add a specific file or can use metacharacters to match multiple files.
 To add everything that has been edited, added, or deleted, use `git add .`.
 
 
@@ -478,7 +478,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 nothing to commit, working tree clean
 ```
 
-As the hint suggest, we probably want to `push` this commmit now.
+As the hint suggests, we probably want to `push` this commit now.
 When collaborating, there is no good reason to delay pushing!
 
 
@@ -502,7 +502,7 @@ For now, let's take a look at text files.
 Why do you need sophisticated formatting to write notes, an abstract, or even a paper?
 Why use software with high overhead when a simpler approach works?
 Have you ever had a problem with a csv file that you could not understand because of the automatic (and hidden) conversion done by Excel? 
-Were you ever clueless about what changes were made in a `docx` or `xlsx` file even if you used Git or saved multiple version`s?
+Were you ever clueless about what changes were made in a `docx` or `xlsx` file even if you used Git or saved multiple versions?
 These are all reasons to use text files!
 
 Text files are great because they can be tracked easily with git.
@@ -676,18 +676,18 @@ Here is an example.
 Pretty neat, isn't it?
 Picture using it to search every one of your repos to find where you used some particular function.
 The `rg` command comes with a whole lot of options.
-To see them, using the `--help` option to see the help pages.
+To see them, use the `--help` option.
 But for better or worse, AI is the easiest way to figure out these types of commands.
 
 # R and Python
 
 It is easy to run an R or Python script in a CLI.
-Why run a Python or R script using the CLI when you have a fancy integrated development environment (IDE) like R?
+Why run a Python or R script using the CLI when you have a fancy integrated development environment (IDE) like RStudio?
 For simplicity and speed.
 IDEs can have a lot of overhead--take a look at how long it takes RStudio or VS Code to open up, for example.
 Maybe it does not always make sense, but it will sometimes.
 
-Furthermore, sometime you just need to run some throw-away code.
+Furthermore, sometimes you just need to run some throw-away code.
 For that the easiest approach is to run R or Python directly in Bash.
 
 Take a look at the tiny R script `scripts-R/make_plot.R`.
@@ -699,7 +699,7 @@ cd scripts-R
 Rscript make_plot.R
 ```
 
-Use `ls` to see if an any files were created.
+Use `ls` to see if any files were created.
 
 You should see a new image file `plot.png`, and you would typically want to open it to check the plot.
 How could you do that?

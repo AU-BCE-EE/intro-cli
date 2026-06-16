@@ -8,5 +8,5 @@
 | `exit`     | Close the shell                         | `exit`                              |
 | `explorer .` | Open File Explorer in current directory | `explorer`                        |
 | `rg`       | Search for text in files                | `rg 'fwrite'`                         |
-| `find`     | Search for files by name                | `find . -iname '*emili*.xlsx`       |
+| `find`     | Search for files by name                | `find . -iname '*emili*.xlsx'`       |
 | `start`    | Open file with default program          | `start plot.png`, `start summ.csv`   |
