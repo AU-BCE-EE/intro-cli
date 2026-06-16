@@ -11,4 +11,4 @@
 
 # Merge problems
 
-If there is a merge issue
+If there is a merge issue, follow
