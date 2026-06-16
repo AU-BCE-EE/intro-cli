@@ -834,6 +834,25 @@ UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
 ```
 
 Python behaves similarly. 
+Try this.
+
+```
+cd scripts
+nano demo.py
+ls
+python demo.py
+```
+
+By the way, are you using tab completion?
+You should be.
+
+Interactive use is not quite as straightforward.
+For some reason related to how Windows handles Python (or vice versa), you will probably need to precede the `python` command with `winpty`.
+This will launch Python interactively.
+
+```
+winpty python
+```
 
 # Exercise
 
