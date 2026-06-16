@@ -1,8 +1,11 @@
 # Introduction to the command line interface (CLI)
 
+# Author and maintainer
+Sasha D. Hafner (https://au.dk/sasha.hafner@bce.au.dk).
+
 # Introduction to the introduction
 
-The command line interface (CLI) may seem outdated if you are used to working with graphical user interfaces, but text-based commands and output are still the most efficient way to carry out many several types of computer tasks.
+The command line interface (CLI) may seem outdated if you are used to working with graphical user interfaces, but text-based commands and output are still the most efficient way to carry out many types of computer tasks.
 In this workshop you will get an introduction to CLI work in Windows.
 But, the commands will be directly transferable to Linux and macOS.
 
@@ -34,7 +37,7 @@ By joining this workshop, you have indicated that you have an interest in learni
 But there are many options for working in a CLI!
 So I have had to make decisions about what we should do in this workshop and how we should do it.
 I am definitely not an expert or "power user", but just a regular CLI user (like most Linux users) with my own opinions.
-I have tried to pick the most general and so userful approaches, but be aware that there are other ways to do the operations we will do here!
+I have tried to pick the most general and so useful approaches, but be aware that there are other ways to do the operations we will do here!
 
 For my part, I recognize that it is hard to change established practice, and the GUI-based approach popular in our work circles (including Microsoft Office) is hard to escape.
 It may be you try the CLI here and decide it is not a good fit.
@@ -138,7 +141,16 @@ cd Documents
 There are some important issues to understand with autocomplete and spaces in directory names.
 Try to `cd` into a directory with spaces in the name.
 
-Finally, close Bash with 
+You should see the current directory listed in Bash before the prompt, but it can be a bit confusing to sort out.
+Instead, you might find it helpful to print it with `pwd`.
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
+$ pwd
+/c/Users/au594831/repos/intro-cli
+```
+
+Finally, close Bash with `exit`.
 
 ```
 exit
@@ -238,6 +250,17 @@ We want to be in this same directory for the next section, but for practice, clo
 ```
 exit
 ```
+
+# History 
+
+A handy feature of Bash (and presumably most shells) is command history.
+To bring up a previous command, just hit the up arrow.
+Try it now.
+To look up a previous command hit `Ctrl + R` and start typing what you remember.
+This reverse incremental search is similar to tab completion.
+Hit `Ctrl + R` again to search further back in history.
+These two features alone make CLI work so much easier than it would otherwise be.
+Be sure to use them in the remainder of the workshop!
 
 # Git via CLI
 
@@ -494,6 +517,16 @@ To https://github.com/AU-BCE-EE/git-playground.git
    51ea466..2a14927  main -> main
 ```
 
+Another very common Git command is `git log`.
+With that you can see commit messages, who did the commit, and the commit hash, which can be used to find that exact version of files locally.
+Run this in the `intro-cli` repo to see my work.
+
+```
+git log 
+```
+
+The easiest way to find details on each commit is through the GitHub interface online.
+
 We will come back to some more advanced Git commands later.
 For now, let's take a look at text files.
 
@@ -642,13 +675,47 @@ git restore .
 
 And to abandon new files, use `git clean -i ...`.
 
+Sometimes you just want to "unstage" a file.
+Use this command for that.
 
-Conflicts due to simultaneous edits within a single file are not so simple.
-We will work through an example.
-The tips that Git provides are quite helpful in these cases.
-And of course, AI tools can help as well.
+```
+git restore --staged that_file.txt
+```
+
+Be careful!
+Leave out the `--staged` flag and you will lose your edits!
+Afterwards, make sure with this.
+
+```
+git status
+```
+
+What do you expect to see now?
+
+Git does a whole lot more than we've seen here.
+Let's look at just one more handy command.
+
+```
+git checkout <commit hash>
+```
+
+This will change the local version of your files to the commit indicated by the hash.
+Be sure to go back to the current version with this afterwards.
+
+```
+git checkout main
+```
+
+or
+
+```
+git checkout master
+```
+
+depending on the name of your main branch.
 
 # Searching within files
+
 
 An advantage of working with text files is you can easily search inside them.
 And Ripgrep is an excellent modern command line tool for doing just that.
