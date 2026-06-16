@@ -220,6 +220,14 @@ Here is what some of that looked like for me:
 
 Do you also have the little tilde `~` after `MINGW64`?
 If so, that means you are in your home directory.
+You can always check with `pwd`.
+
+```
+UNI+au594831@PW0E5F78 MINGW64 ~
+$ pwd
+/c/Users/au594831
+```
+
 If not, go there with
 
 ```

@@ -10,9 +10,10 @@
 1. `git status` to check for new local work (address if present with `git add ...` and `git commit -m ...` or `git restore ...` 
 2. `git pull` to download and merge in remote (GitHub) work (if merge conflict, see Merge conflict section below)
 3. Edit files (text editor, RStudio, VS Code, run scripts, etc.)
-4. `git add .` to stage all changes or else be more specific than `.`
-5. `git commit -m 'commit message...'` to commit
-6. `git push` to update the remote repo
+4. `git status` to see what you've done and think about how to proceed, e.g., commit or not, commit together or separate, take a closer look with `git diff ...`, etc.
+5. `git add .` to stage all changes or else be more specific than `.`, e.g., `git add scripts/.`, `git add *.txt`, etc.
+6. `git commit -m 'commit message...'` to commit
+7. `git push` to update the remote repo
 
 # Merge problems
 
