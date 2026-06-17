@@ -963,18 +963,4 @@ Finally, work with a repo where you have write permission:
 3. Run the script.
 4. Stage, commit, and push your work.
 5. Did you have any problems? If so, sort them out and try pushing again.
-5. 
-
-4. Find all the files that have `main` in their name.
-5. Try to run `main.R` in R in batch mode. You should see an error. Why?
-
-And finally:
-
-1. Clone one of your own repos or navigate in if you already have it.
-2. Check for changes on the remote repo and merge them in if there are any.
-3. 
-7. Use the appropriate `git` command to see if any files were changed.
-8. Stage all those files.
-9. Change your mind and `restore` the staged files.
-10. Eliminate all the changes you made.
 
