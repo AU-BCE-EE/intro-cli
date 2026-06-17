@@ -1,9 +1,12 @@
 # Preparation for the CLI workshop - checking Git Bash
 
-If you have installed [GitHub Desktop](https://desktop.github.com/download/) then you have a command line program called Git Bash as well.
-Here you will make sure it is accessible so we can all hit the ground running when we meet.
+We will use a program called Git Bash for this workshop.
+This document has installation instructions and more, to try to ensure that we can hit the ground running on Friday.
 
-If you have not installed GitHub Desktop, please do that first using this link: https://desktop.github.com/download/.
+# Installation
+
+If you don't already have Git Bash installed, download and install it from here: <https://git-scm.com/install/windows>.
+You can accept the default installation options.
 
 # Open Git Bash
 
