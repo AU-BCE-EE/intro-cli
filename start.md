@@ -1,4 +1,4 @@
-# Preparation for the CLI workshop - checking Git Bash
+# Preparation for the CLI workshop - Git Bash
 
 We will use a program called Git Bash for this workshop.
 This document has installation instructions and more, to try to ensure that we can hit the ground running on Friday.
@@ -51,6 +51,12 @@ If you have not already authenticated, you should be prompted to log into github
 Once authenticated, you should see something like this:
 
 <img width="1129" height="539" alt="image" src="https://github.com/user-attachments/assets/24e05e34-6855-45cd-b781-14d7bdd6a9e9" />
+
+# Troubleshooting
+
+If you could open Git Bash but saw an authentication error or a message about the HTTPS protocol when trying to clone, you might find that all problems are solved by restarting Windows.
+Give it a try.
+If that does not work, send me a message.
 
 # That's it!
 
