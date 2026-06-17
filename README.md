@@ -554,7 +554,7 @@ The easiest way to find details on each commit is through the GitHub interface o
 We will come back to some more advanced Git commands later.
 For now, let's take a look at text files.
 
-# Text files
+# Text files and Bash file operations
 
 Why do you need sophisticated formatting to write notes, an abstract, or even a paper?
 Why use software with high overhead when a simpler approach works?
@@ -579,7 +579,67 @@ Here is what I've done:
 
 <img width="1240" height="597" alt="image" src="https://github.com/user-attachments/assets/f9a51332-0a6d-48f7-89e8-c2019cb202f1" />
 
-Now, go ahead and `add` and `commit`.
+Close Nano and let's learn some new Bash commands.
+To copy a file, use `cp`.
+So make a copy with a `2` added on the end of the name.
+
+```
+cp sasha.md sasha2.md
+```
+
+Make sure it is there!
+
+```
+ls
+```
+
+The `mv` command moves files.
+Here we'll move the new one up one level into `repos`.
+
+```
+mv sasha2.md ../.
+```
+
+or
+
+```
+mv sasha2.md ../sasha2.md
+```
+
+or
+
+```
+mv sasha2.md ~/repos/sasha2.md
+```
+
+Let's go into `repos` and check.
+
+```
+cd ..
+ls
+```
+
+Are you in the right directory?
+
+```
+pwd
+```
+
+If you are lost, use an absolute path.
+
+```
+cd ~/repos
+```
+
+To delete a file, use `rm`.
+
+```
+rm sasha2.md
+```
+
+Let's stop messing around with new files for now.
+Back to Git.
+Go ahead and `add` and `commit`.
 Don't `push` yet--because we have multiple changes going on at once this is one of those somewhat rare cases of simultaneous work where we will get some conflicts.
 Let's have just one of us commit and push first.
 
@@ -847,7 +907,7 @@ python demo.py
 ```
 
 By the way, are you using tab completion?
-You should be.
+You should be!
 
 Interactive use is not quite as straightforward.
 For some reason related to how Windows handles Python (or vice versa), you will probably need to precede the `python` command with `winpty`.
@@ -865,12 +925,54 @@ Here is what I see:
 
 Do the following in Git Bash.
 
-1. Clone this repo: <https://github.com/AU-BCE-EE/Pedersen-2025-MAG>.
+1. Clone this repo: <https://github.com/AU-BCE-EE/Hafner-2023-bls-wt-comp>.
 2. Find a csv file, using an appropriate command.
-3. Open the file in Nano and check the delimiter.
-4. Find an R script named `main.R` and view it.
-5. Run the script in batch mode.
-6. Install any missing packages interactively in R and run your script again.
+3. Navigate into the directory containing that csv file, using an appropriate command.
+4. Confirm the path of the directory.
+5. List all the files in the directory.
+6. Open the file in Nano and check the delimiter. Close the file.
+7. Open the file using your default program for csv files (open from Bash). What is the program? Close the program.
+8. Open Windows File Explorer in that directory.
+9. Go back to the repo root in Bash.
+10. Use an appropriate command to find all the locations of the text `library` in the repo files. Which files have that text? Which packages are required to run this analysis?
+11. Close the shell.
+
+Now you will actually run an analysis in R:
+
+1. Clone <https://github.com/AU-BCE-EE/demo-R1>.
+2. See if there is a file named `main.R` somewhere.
+3. See if `library` is present in any of the R scripts.
+4. Check the name of the file(s) in the `plots` subdirectory using the appropriate Bash command.
+5. Find the script that creates that file in `plots`. Open the script and change the name used for the png plot file.
+6. Delete the original plot png file.
+7. Run `scripts/main.R` in R in batch mode.
+
+And then some Git work:
+
+1. Working with that same `demo-R1` repo, use Git to see what changed. 
+2. See exactly what changed in the R script. Does it match what you expect?
+3. Stage and commit just the R script. Give it an appropriate commit message.
+4. Stage all remaining changes.
+5. Unstage and undo all changes.
+6. Try to push your commit. Does it work?
+
+Finally, work with a repo where you have write permission:
+
+1. Create a new subdirectory with a unique name for an R or Python script, e.g., `analysis-sasha` or `scripts-sasha`.
+2. Use nano to create a simple R or Python script that either writes some values to an output file or prints some values to the console.
+3. Run the script.
+4. Stage, commit, and push your work.
+5. Did you have any problems? If so, sort them out and try pushing again.
+5. 
+
+4. Find all the files that have `main` in their name.
+5. Try to run `main.R` in R in batch mode. You should see an error. Why?
+
+And finally:
+
+1. Clone one of your own repos or navigate in if you already have it.
+2. Check for changes on the remote repo and merge them in if there are any.
+3. 
 7. Use the appropriate `git` command to see if any files were changed.
 8. Stage all those files.
 9. Change your mind and `restore` the staged files.

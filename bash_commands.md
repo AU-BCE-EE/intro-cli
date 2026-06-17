@@ -5,6 +5,9 @@
 | `cd`       | Change directory                        | `cd repos`, `cd ..` `cd ~`           |
 | `ls`       | List directory contents                 | `ls`, `ls *.txt`                     |
 | `mkdir`    | Create a directory                      | `mkdir repos`                       |
+| `cp`       | Copy a file                             | `cp main.R ../backup/main.R`         |
+| `mv`       | Move or rename a file                   | `mv uhhh.csv output.csv`             |
+| `rm`       | Delete a file                           | `rm temp.txt`             |
 | `exit`     | Close the shell                         | `exit`                              |
 | `explorer .` | Open File Explorer in current directory | `explorer`                        |
 | `rg`       | Search for text in files                | `rg 'fwrite'`                         |
