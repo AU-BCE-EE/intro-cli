@@ -6,6 +6,21 @@ Sasha D. Hafner (https://au.dk/sasha.hafner@bce.au.dk).
 # Introduction to the introduction
 
 The command line interface (CLI) may seem outdated if you are used to working with graphical user interfaces, but text-based commands and output are still the most efficient way to carry out many types of computer tasks.
+What kind of tasks?
+Here are some of the ones you will do in the final exercise:
+
+* Find files based on name or contents
+* Navigate among directories
+* List all the files in a directory
+* Create and delete files and directories
+* Open text files within the shell 
+* Open any file with the default program
+* Open Windows File Explorer 
+* Run R and Python scripts
+* Use R and Python interactively
+* Clone a git repo
+* Carry out all Git operations, like pulling and pushing, commiting, comparing versions
+
 This document was written as a guide for a hands-on workshop on the CLI planned for June 2026 in Aarhus.
 But it could serve as a stand-alone introduction as well.
 The focus is CLI work in Windows.
@@ -637,6 +652,12 @@ To delete a file, use `rm`.
 rm sasha2.md
 ```
 
+To delete a directory, you need the `-r` flag.
+
+```
+rm -r dead_dir
+```
+
 Let's stop messing around with new files for now.
 Back to Git.
 Go ahead and `add` and `commit`.
@@ -921,7 +942,12 @@ Here is what I see:
 
 <img width="1166" height="574" alt="image" src="https://github.com/user-attachments/assets/4ba0e297-9838-44c9-9159-655898fd890f" />
 
-# Exercise
+# AI help
+I don't have time to expand this topic but perhaps it does not need to be anything more than a short note.
+AI tools like Claude Code and ChatGPT are very good at providing guidance on Bash.
+Try it out by asking about a task you now know how to do, or some variant you do not know about.
+
+# Exercises
 
 Do the following in Git Bash.
 
@@ -963,4 +989,6 @@ Finally, work with a repo where you have write permission:
 3. Run the script.
 4. Stage, commit, and push your work.
 5. Did you have any problems? If so, sort them out and try pushing again.
+6. Delete the subdirectory you created
+7. Assume you changed your mind and want to keep the subdirectory, so with Git, restore it
 

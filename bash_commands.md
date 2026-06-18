@@ -8,6 +8,7 @@
 | `cp`       | Copy a file                             | `cp main.R ../backup/main.R`         |
 | `mv`       | Move or rename a file                   | `mv uhhh.csv output.csv`             |
 | `rm`       | Delete a file                           | `rm temp.txt`             |
+| `rm -r`    | Delete a directory                      | `rm -r dir_name`             |
 | `exit`     | Close the shell                         | `exit`                              |
 | `explorer .` | Open File Explorer in current directory | `explorer`                        |
 | `rg`       | Search for text in files                | `rg 'fwrite'`                         |
