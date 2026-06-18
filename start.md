@@ -1,7 +1,7 @@
 # Preparation for the CLI workshop - Git Bash
 
 We will use a program called Git Bash for this workshop.
-This document has installation instructions and more, to try to ensure that we can hit the ground running on Friday.
+This document has installation instructions (well, a download URL) and some steps for making sure Git Bash is working, to try to ensure that we can hit the ground running on Friday.
 
 # Installation
 
