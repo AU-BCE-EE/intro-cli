@@ -19,7 +19,7 @@ Here are some of the ones you will do in the final exercise:
 * Run R and Python scripts
 * Use R and Python interactively
 * Clone a git repo
-* Carry out all Git operations, like pulling and pushing, commiting, comparing versions
+* Carry out all Git operations, like pulling and pushing, committing, comparing versions
 
 This document was written as a guide for a hands-on workshop on the CLI planned for June 2026 in Aarhus.
 But it could serve as a stand-alone introduction as well.
@@ -156,7 +156,15 @@ cd Documents
 ```
 
 There are some important issues to understand with autocomplete and spaces in directory names.
-Try to `cd` into a directory with spaces in the name.
+Try to `cd` into a directory with spaces in the name to see why shell users dislike spaces in directory or file names.
+You have two options: quoting or an "escape" character.
+
+```
+cd "One Drive"
+cd One\ Drive
+```
+
+Get out of there once you are in.
 
 You should see the current directory listed in Bash before the prompt, but it can be a bit confusing to sort out.
 Instead, you might find it helpful to print it with `pwd`.
@@ -202,18 +210,27 @@ Good choices are `-R` and `-lh`.
 But to be honest, it is difficult to figure out how to use these commands from the help pages.
 AI tools are much easier.
 
-To list only a particular type of file, you can use *shell expansion*, e.g., for `xlsx` files, use this.
+To list only a particular type of file, you can use *shell expansion* or *globbing*, e.g., for `xlsx` files, use this.
 
 ```
 ls *.xlsx
 ```
 
-But for searching for files, the `find` command is much more powerful.
+The `*.xlsx` is called a "glob" because it has the `*` wildcard character in it.
+Because it is unquoted here it undergoes the globbing, meaning Bash will replace the `*` with all matches that are present before passing the result on to the `ls` command.
+If you quote it, globbing does not happen, and the literal text `*.xlsx` is passed to the receiving program.
+That won't work here (it is not what we intend anyway) but it is the right approach in cases where you want the receiving program to do the pattern matching.
+We will see that in `find` for example.
+
+For searching for files, the `find` command is much more powerful than `ls`.
 For example, this will find all `xlsx` files, searching recursively.
 
 ```
 find . -name '*.xlsx'
 ```
+
+Notice the quotes?
+There are differences between single and double quotes in Bash, but not for any of the commands in this workshop.
 
 Use the `-iname` flag for a case-insensitive search.
 Try `find`, tweaking the command to fit your files.
@@ -446,7 +463,7 @@ Here is what `git diff . . .` can show.
 
 <img width="1145" height="734" alt="image" src="https://github.com/user-attachments/assets/daced883-5893-42c7-a5d6-21184fdcc8d5" />
 
-If I am ready to commit this change, I can do that in two steps:`git add ...` and `git commit ...`.
+If I am ready to commit this change, I can do that in two steps: `git add ...` and `git commit ...`.
 The first "stages" the files and the second actually commits.
 
 ```
@@ -461,7 +478,7 @@ $ git commit -m 'Add a bit to README.md'
  1 file changed, 2 insertions(+)
 ```
 
-The `-m` option means a commit message will go on the same line, like above.
+The `-m` option means a commit message will go on the same line, like above, or at least part of the same command.
 For a detailed commit message, add a blank line between the summary and the body, like this.
 
 ```
@@ -473,6 +490,8 @@ $ git commit -m 'short summary here
 > maybe across multiple
 > lines'
 ```
+
+The `>` character is the Bash continuation character; it means you are still inside a command.
 
 Now, let's say instead of editing a file I create a new one.
 For example, I just created a short R script called `none.R`.
@@ -611,7 +630,7 @@ Here is what I've done:
 
 <img width="1240" height="597" alt="image" src="https://github.com/user-attachments/assets/f9a51332-0a6d-48f7-89e8-c2019cb202f1" />
 
-Close Nano and let's learn some new Bash commands.
+Close Micro with `Ctrl + Q` and let's learn some new Bash commands.
 To copy a file, use `cp`.
 So make a copy with a `2` added on the end of the name.
 
@@ -880,7 +899,7 @@ Furthermore, sometimes you just need to run some throw-away code.
 For that the easiest approach is to run R or Python directly in Bash.
 
 Take a look at the tiny R script `scripts/make_plot.R`.
-Do it all using Bash and Nano!
+Do it all using Bash and Micro!
 You can run that with the `Rscript` command.
 
 ```
@@ -971,12 +990,12 @@ Creating shell scripts that do exactly what you want is something AI tools are g
 Let me search my local repos for some example shell scripts.
 
 ```
-find . -name *.sh
+find . -name '*.sh'
 ```
 
 # Sending output to file
 
-This is a simple and useful opration.
+This is a simple and useful operation.
 Whenever you want to save the console output from a command, you can send it to a file with `>`, e.g., 
 
 ```
@@ -992,7 +1011,7 @@ Do the following in Git Bash.
 3. Navigate into the directory containing that csv file, using an appropriate command.
 4. Confirm the path of the directory.
 5. List all the files in the directory.
-6. Open the file in Nano and check the delimiter. Close the file.
+6. Open the file in Micro and check the delimiter. Close the file.
 7. Open the file using your default program for csv files (open from Bash). What is the program? Close the program.
 8. Open Windows File Explorer in that directory.
 9. Go back to the repo root in Bash.

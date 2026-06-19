@@ -6,7 +6,7 @@
 | `ls`       | List directory contents                 | `ls`, `ls *.txt`                     |
 | `mkdir`    | Create a directory                      | `mkdir repos`                       |
 | `cp`       | Copy a file                             | `cp main.R ../backup/main.R`         |
-| `mv`       | Move or rename a file                   | `mv uhhh.csv output.csv`             |
+| `mv`       | Move or rename a file                   | `mv o.csv output.csv`             |
 | `rm`       | Delete a file                           | `rm temp.txt`             |
 | `rm -r`    | Delete a directory                      | `rm -r dir_name`             |
 | `exit`     | Close the shell                         | `exit`                              |

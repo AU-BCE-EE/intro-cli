@@ -7,7 +7,7 @@
 
 # Typical workflow 
 
-1. `git status` to check for new local work (address if present with `git add ...` and `git commit -m ...` or `git restore ...` 
+1. `git status` to check for new local work (address if present with `git add ...` and `git commit -m ...` or `git restore ...`) 
 2. `git pull` to download and merge in remote (GitHub) work (if merge conflict, see Merge conflict section below)
 3. Edit files (text editor, RStudio, VS Code, run scripts, etc.)
 4. `git status` (recommended) to see what you've done and think about how to proceed
