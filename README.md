@@ -947,6 +947,25 @@ I don't have time to expand this topic but perhaps it does not need to be anythi
 AI tools like Claude Code and ChatGPT are very good at providing guidance on Bash.
 Try it out by asking about a task you now know how to do, or some variant you do not know about.
 
+# Shell scripts
+Shell scripts are analogous to R or Python scripts, but they have code for a shell language--here Bash.
+So the commands we used above can be put in a text file and for all kinds of tasks, or a high-level combination of tasks. 
+Creating shell scripts that do exactly what you want is something AI tools are good at.
+Let me search my local repos for some example shell scripts.
+
+```
+find . -name *.sh
+```
+
+# Sending output to file
+
+This is a simple and useful opration.
+Whenever you want to save the console output from a command, you can send it to a file with `>`, e.g., 
+
+```
+find . -name *.sh > sh_search.txt
+```
+
 # Exercises
 
 Do the following in Git Bash.
@@ -960,7 +979,7 @@ Do the following in Git Bash.
 7. Open the file using your default program for csv files (open from Bash). What is the program? Close the program.
 8. Open Windows File Explorer in that directory.
 9. Go back to the repo root in Bash.
-10. Use an appropriate command to find all the locations of the text `library` in the repo files. Which files have that text? Which packages are required to run this analysis?
+10. Use an appropriate command to find all the locations of the text `library` in the repo files. Which files have that text? Which packages are required to run this analysis? Can you save this list in a file without copy/paste?
 11. Close the shell.
 
 Now you will actually run an analysis in R:

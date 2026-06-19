@@ -11,6 +11,7 @@
 | `rm -r`    | Delete a directory                      | `rm -r dir_name`             |
 | `exit`     | Close the shell                         | `exit`                              |
 | `explorer .` | Open File Explorer in current directory | `explorer`                        |
-| `rg`       | Search for text in files                | `rg 'fwrite'`                         |
+| `rg`       | Search for text in files                | `rg fwrite`                         |
 | `find`     | Search for files by name                | `find . -iname '*emili*.xlsx'`       |
 | `start`    | Open file with default program          | `start plot.png`, `start summ.csv`   |
+| `>`        | An operator, not a command, to send output to file  | `rg fwrite > results.txt`   |
