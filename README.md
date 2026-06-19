@@ -926,8 +926,21 @@ R
 
 And you get an interactive R console.
 If you don't, you probably have a PATH variable problem.
-To fix it, you need to add the path of the R executable to the user PATH environment variable. 
-I can help!
+To fix it, you need to either add the path of the R executable to the user PATH environment variable (Windows) or, probably better, add it to a `~/.bashrc` file like this. 
+
+First open (or create) the file
+
+```
+micro ~/.bashrc
+```
+
+then paste this in
+
+```
+export PATH="$PATH:/c/Program Files/R/R-4.x.x/bin"
+```
+
+You have to find the exact path of course, but you can get that from your R shortcut.
 
 ```
 UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main)
