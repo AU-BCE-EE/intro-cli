@@ -588,7 +588,24 @@ Give it a try.
 nano sasha.md
 ```
 
-Add some content.
+The drawbacks?
+Keyboard shortcuts are different from Windows (and non-Windows!) programs.
+And copy/paste is tricky.
+
+In my opinion Micro is a much easier alternative.
+But it is not bundled with Git Bash, so you need to install it with:
+
+```
+install zyedidia.micro
+```
+
+And to use it:
+
+```
+micro sasha.md
+```
+
+Now add some content.
 You can get information on Markdown from [this handy guidance document](https://github.com/AU-BCE-EE/guidance-GitHub/blob/main/markdown.md).
 Here is what I've done:
 
@@ -725,7 +742,7 @@ CONFLICT (content): Merge conflict in x
 Automatic merge failed; fix conflicts and then commit the result.
 
 UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main|MERGING)
-$ nano x
+$ micro x
 
 UNI+au594831@PW0E5F78 MINGW64 ~/repos/intro-cli (main|MERGING)
 $ git status
@@ -922,7 +939,7 @@ Try this.
 
 ```
 cd scripts
-nano demo.py
+micro demo.py
 ls
 python demo.py
 ```
@@ -1004,7 +1021,7 @@ And then some Git work:
 Finally, work with a repo where you have write permission:
 
 1. Create a new subdirectory with a unique name for an R or Python script, e.g., `analysis-sasha` or `scripts-sasha`.
-2. Use nano to create a simple R or Python script that either writes some values to an output file or prints some values to the console.
+2. Use micro or nano to create a simple R or Python script that either writes some values to an output file or prints some values to the console.
 3. Run the script.
 4. Stage, commit, and push your work.
 5. Did you have any problems? If so, sort them out and try pushing again.

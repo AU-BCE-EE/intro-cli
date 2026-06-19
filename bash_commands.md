@@ -14,4 +14,6 @@
 | `rg`       | Search for text in files                | `rg fwrite`                         |
 | `find`     | Search for files by name                | `find . -iname '*emili*.xlsx'`       |
 | `start`    | Open file with default program          | `start plot.png`, `start summ.csv`   |
-| `>`        | An operator, not a command, to send output to file  | `rg fwrite > results.txt`   |
+| `>`        | An operator, not a command; send output to file  | `rg fwrite > results.txt`   |
+| `micro`    | Open file in Micro editor               | `micro README.md`   |
+| `nano`    | Open file in Nano editor                 | `nano README.md`   |
