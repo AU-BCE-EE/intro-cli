@@ -596,7 +596,7 @@ In my opinion Micro is a much easier alternative.
 But it is not bundled with Git Bash, so you need to install it with:
 
 ```
-install zyedidia.micro
+winget install zyedidia.micro
 ```
 
 And to use it:
